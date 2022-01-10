@@ -27,11 +27,10 @@ int[n]: the grades after rounding as appropriate
   
   --start
   def gradingStudents(grades):
+    def gradingStudents(grades):
     for i in range(0,len(grades)):
         
-        if grades[i] < 38:
-            continue
-        else:
+        if grades[i] >= 38:
             temp = grades[i]
             te = temp % 5
             if te == 3:
@@ -40,8 +39,6 @@ int[n]: the grades after rounding as appropriate
             elif te == 4:
                 temp = temp + 1
                 grades[i] = temp
-            else:
-                continue
     return grades;
             
 if __name__ == '__main__':
