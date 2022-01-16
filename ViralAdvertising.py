@@ -36,12 +36,27 @@ A single integer, n, the day number. """
 #
 
 def viralAdvertising(n):
-    cnt = 2
-    eachday = 2 #how many people have liked the ad by the end of a given day
-    for i in range(2, n+1):
-        eachday = eachday + (n-1)
-        cnt = n + eachday
-    return cnt;
+    def viralAdvertising(n):
+    shared =5
+    cumulative=0
+    for i in range(1,n+1):
+        liked = shared//2
+        cumulative+=liked
+        shared = liked*3
+    return cumulative;
+
+    
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input().strip())
+
+    result = viralAdvertising(n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
