@@ -1,2 +1,2 @@
 # Hackerrank-Algorithm
-Solutions of Hackerrank Algorithm Challenges
+Solutions of Challenges from some Platforms like Hackerrank, Coderbyte and patika.dev.
